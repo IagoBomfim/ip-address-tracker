@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg" sizes="32x32" href="./images/icon-location.svg">
+  <title>IP Address Tracker</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+
+<body>
+  <main>
+    <div class="top">
+      <h1 class="title">IP Address Tracker</h1>
+      <div class="form">
+        <input type="text" id="ip-input" autofocus placeholder="Search for any IP address or domain">
+        <button class="submit" id="btn-submit"><img src="images/icon-arrow.svg" alt="Submit Button"></button>
+      </div>
+      <div class="info" id="info">
+        <div class="box ip-info-box">
+          <span class="field-name">ip address</span>
+          <span class="info-field" id="ip-info"></span>
+        </div>
+        <div class="box location-info-box">
+          <span class="field-name">location</span>
+          <span class="info-field" id="location-info"></span>
+        </div>
+        <div class="box timezone-info-box">
+          <span class="field-name">timezone</span>
+          <span class="info-field" id="timezone-info"></span>
+        </div>
+        <div class="box isp-info-box">
+          <span class="field-name">isp</span>
+          <span class="info-field" id="isp-info"></span>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+  </main>
+  <script src="/scripts/main.js" type="module"></script>
+</body>
+
+</html>
